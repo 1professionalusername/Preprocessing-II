@@ -1,24 +1,47 @@
 .home {
-
+  
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+    
+
+    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+        
+    }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: 100%;
+        //align-items: center;
+        
+    }
+
+      
 
       img {
         border-radius: 10px;
+        @media @mobile {
+          
+          align-items: center;
+          
+      }
       }
     }
   }
@@ -26,6 +49,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      
+  }
 
     .text-content {
       padding-left: 1%;
@@ -35,15 +64,38 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        display: flex;
+        width: 100%
+      }
+      
+      @media @mobile {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+        
+     }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      
+      width: 100%;
+  }
 
     img {
       border-radius: 10px;
+
+      @media @mobile {
+        width: 100%;
+        border-radius: 0px;
+        
+        
+    }
     }
   }
 
@@ -53,9 +105,45 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: inline-block ;
+  }
+    h4{
+      justify-content: center;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
-      margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+        align-items: center;
+    }
     }
   }
+
+
+hr {
+    border: 1px dashed lightgrey;
+    
+}
+
+.busimg {
+    padding-bottom: 15px;
+    @media @mobile {
+            max-width: 100%;
+            
+    }
+}
+
+.btn { 
+   
+  .button();
+  @media @mobile {
+    width: 90%;
+   
+}
+}
 }// home
+
